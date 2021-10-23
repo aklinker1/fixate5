@@ -12,18 +12,18 @@ class FolderListItemViewHolder(viewGroup: ViewGroup) :
   BaseViewHolder<FolderListItem>(viewGroup, R.layout.folder_list_item) {
   private val binding = FolderListItemBinding.bind(itemView)
 
-  override fun onBind(folder: FolderListItem) {
+  override fun onBind(data: FolderListItem) {
     binding.apply {
-      checkbox.visibility = if (folder.multiselectMode) View.VISIBLE else View.GONE
-      checkbox.isChecked = folder.multiselectMode && folder.isSelected
+      checkbox.visibility = if (data.multiselectMode) View.VISIBLE else View.GONE
+      checkbox.isChecked = data.multiselectMode && data.isSelected
 
       menu.visibility = View.GONE // if (folder.multiselectMode) View.GONE else View.VISIBLE
 
-      icon.setImageResource(KnownFileIcons[folder.folder.path] ?: R.drawable.folder_default)
+      icon.setImageResource(KnownFileIcons[data.folder.path] ?: R.drawable.folder_default)
 
-      name.text = folder.displayName
+      name.text = data.displayName
 
-      click.setOnClickListener { folder.onClick(folder.folder) }
+      click.setOnClickListener { data.onClick(data.folder) }
     }
   }
 }
