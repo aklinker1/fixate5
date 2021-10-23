@@ -1,0 +1,12 @@
+<resources>
+    <!-- General -->
+    <string name="app_name">Fixate</string>
+
+    <!-- Folder Aliases -->
+    <string name="folder_alias_home">Home</string>
+    <string name="folder_alias_trash">Trash</string>
+    <string name="files_section">Files</string>
+    <string name="folders_section">Folders</string>
+    <string name="file_options">More options</string>
+    <string name="main_menu">Main menu</string>
+</resources>

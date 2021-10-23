@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.3223958333333333" />
+        <entry key="app/src/main/res/drawable-v24/file_anim.xml" value="0.4" />
+        <entry key="app/src/main/res/drawable-v24/file_app.xml" value="0.4" />
+        <entry key="app/src/main/res/drawable-v24/file_audio.xml" value="0.4" />
+        <entry key="app/src/main/res/drawable-v24/file_code_language.xml" value="0.4" />
+        <entry key="app/src/main/res/drawable-v24/file_code_layout.xml" value="0.4" />
+        <entry key="app/src/main/res/drawable-v24/file_compressed.xml" value="0.4" />
+        <entry key="app/src/main/res/drawable-v24/file_document.xml" value="0.3104166666666667" />
+        <entry key="app/src/main/res/drawable-v24/file_image.xml" value="0.4" />
+        <entry key="app/src/main/res/drawable-v24/file_markdown.xml" value="0.4" />
+        <entry key="app/src/main/res/drawable-v24/file_pdf.xml" value="0.4" />
+        <entry key="app/src/main/res/drawable-v24/file_presentation.xml" value="0.3104166666666667" />
+        <entry key="app/src/main/res/drawable-v24/file_program.xml" value="0.3104166666666667" />
+        <entry key="app/src/main/res/drawable-v24/file_run.xml" value="0.3104166666666667" />
+        <entry key="app/src/main/res/drawable-v24/file_spreadsheet.xml" value="0.3104166666666667" />
+        <entry key="app/src/main/res/drawable-v24/file_text.xml" value="0.3104166666666667" />
+        <entry key="app/src/main/res/drawable-v24/file_unknown.xml" value="0.3104166666666667" />
+        <entry key="app/src/main/res/drawable-v24/file_video.xml" value="0.3104166666666667" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.5641025641025641" />
+        <entry key="app/src/main/res/drawable/ac_menu.xml" value="0.3182291666666667" />
+        <entry key="app/src/main/res/drawable/ic_chevron_right.xml" value="0.3104166666666667" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.5641025641025641" />
+        <entry key="app/src/main/res/drawable/ic_overflow_menu.xml" value="0.4" />
+        <entry key="app/src/main/res/drawable/path_list_gradient.xml" value="0.34814814814814815" />
+        <entry key="app/src/main/res/drawable/ripple_on_surface.xml" value="0.3104166666666667" />
+        <entry key="app/src/main/res/layout-v23/welcome_activity.xml" value="0.17889492753623187" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.556997219647822" />
+        <entry key="app/src/main/res/layout/file_explorer_fragment.xml" value="0.26443768996960487" />
+        <entry key="app/src/main/res/layout/file_list_fragment.xml" value="0.26443768996960487" />
+        <entry key="app/src/main/res/layout/file_list_header.xml" value="0.26443768996960487" />
+        <entry key="app/src/main/res/layout/file_list_section.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/file_path_list_item.xml" value="0.27077001013171226" />
+        <entry key="app/src/main/res/layout/folder_list_item.xml" value="0.29030797101449274" />
+        <entry key="app/src/main/res/layout/main_activity.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/navigation_path.xml" value="0.14311043566362716" />
+        <entry key="app/src/main/res/layout/path_list_fragment.xml" value="0.14311043566362716" />
+        <entry key="app/src/main/res/layout/welcome_activity.xml" value="0.21" />
+        <entry key="livefs/src/main/res/drawable/file_anim.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/file_app.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/file_audio.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/folder_alarms.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/folder_archive.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/folder_cardboard.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/folder_dcim.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/folder_default.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/folder_documents.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/folder_downloads.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/folder_home.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/folder_movies.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/folder_music.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/folder_notifications.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/folder_pictures.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/folder_podcasts.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/folder_ringtones.xml" value="0.4" />
+        <entry key="livefs/src/main/res/drawable/folder_trash.xml" value="0.4" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    style="@style/Theme.Fixate.NoPaddingToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:navigationIcon="@drawable/ac_menu">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@android:color/transparent">
+
+        <!-- TODO: set paddingEnd="96dp" after FAB is added -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/path_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            tools:itemCount="1"
+            tools:listitem="@layout/navigation_path" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/path_list_gradient" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:rotation="180"
+            android:src="@drawable/path_list_gradient" />
+
+    </FrameLayout>
+
+</androidx.appcompat.widget.Toolbar>

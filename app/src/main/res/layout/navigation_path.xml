@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    tools:background="?colorPrimarySurface">
+
+    <View
+        android:id="@+id/click"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/icon"
+        app:layout_constraintRight_toRightOf="@id/name"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/chevron"
+        android:layout_width="28dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="4dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="4dp"
+        android:src="@drawable/ic_chevron_right"
+        android:tint="?colorOnPrimarySurface"
+        android:tintMode="multiply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:tint="@sample/path_list.json/data/chevronColor"
+        tools:visibility="@sample/path_list.json/data/chevronVisibility" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon"
+        android:layout_width="32dp"
+        android:layout_height="24dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:tint="?colorOnPrimarySurface"
+        android:tintMode="multiply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/chevron"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@sample/path_list.json/data/icon"
+        tools:tint="@sample/path_list.json/data/iconColor"
+        tools:visibility="@sample/path_list.json/data/iconVisibility" />
+
+    <io.aklinker1.files.ui.WeightedTextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:textColor="?colorOnPrimarySurface"
+        android:textSize="16sp"
+        app:font_weight="medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/icon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@sample/path_list.json/data/name"
+        tools:textColor="@sample/path_list.json/data/textColor" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

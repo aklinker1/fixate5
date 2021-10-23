@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- View attributes -->
+    <declare-styleable name="WeightedTextView">
+        <attr name="font_weight" format="enum">
+            <enum name="thin" value="0" />
+            <enum name="light" value="1" />
+            <enum name="regular" value="2" />
+            <enum name="medium" value="3" />
+            <enum name="bold" value="4" />
+            <enum name="black" value="5" />
+        </attr>
+        <attr name="font_name" format="string" />
+        <attr name="italicize" format="boolean" />
+    </declare-styleable>
+
+</resources>

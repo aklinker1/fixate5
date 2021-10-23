@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "name": "Home",
+      "icon": "@drawable/folder_external_storage",
+      "iconVisibility": "visible",
+      "chevronVisibility": "gone",
+      "font_weight": "regular",
+      "textColor": "@color/text_disabled",
+      "iconColor": "@color/text_disabled",
+      "chevronColor": "@color/text_disabled"
+    },
+    {
+      "name": "DCIM",
+      "icon": "@drawable/folder_dcim",
+      "iconVisibility": "visible",
+      "chevronVisibility": "visible",
+      "font_weight": "bold",
+      "textColor": "@color/text_primary",
+      "iconColor": "@color/text_primary",
+      "chevronColor": "@color/text_primary"
+    },
+    {
+      "name": "Camera",
+      "icon": "@drawable/folder_default",
+      "iconVisibility": "gone",
+      "chevronVisibility": "visible",
+      "font_weight": "regular",
+      "textColor": "@color/path_text_dark",
+      "iconColor": "@color/path_text_dark",
+      "chevronColor": "@color/path_text_dark"
+    }
+  ]
+}
