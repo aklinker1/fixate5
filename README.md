@@ -1,4 +1,4 @@
-<div style="display:flex"><img style="flex:1" src="artwork/icon-store.png"><img style="flex:1" src="artwork/icon-beta-store.png"></div>
+![App Icon](artwork/icon-store.png)
 
 # Fixate File Explorer
 
