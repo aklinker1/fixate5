@@ -1,6 +1,7 @@
 <resources>
     <!-- General -->
     <string name="app_name">Fixate</string>
+    <string name="app_name_beta">Fixate Beta</string>
 
     <!-- Folder Aliases -->
     <string name="folder_alias_home">Home</string>

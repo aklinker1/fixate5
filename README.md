@@ -1,3 +1,5 @@
+<div style="display:flex"><img style="flex:1" src="artwork/icon-store.png"><img style="flex:1" src="artwork/icon-beta-store.png"></div>
+
 # Fixate File Explorer
 
 This is **version 5** of the application, and yes, all 5 versions were complete rewrites! Versions 3-5 all have similarities though, I started to settle down in my style at that point, but 1, 2, and 3 are completely different.
@@ -17,14 +19,16 @@ This is **version 5** of the application, and yes, all 5 versions were complete 
 
 ### Useful Commands
 
+There are 2 flavors of the app: `beta` and `prod`. `beta` has a different package name, icon, and app name, all of which include "beta"
+
 ```bash
 # Run it locally
-./gradlew installDebug
+./gradlew installBetaDebug
 
 # Build debug APK
-./gradlew assembleDebug
+./gradlew assembleProdDebug
 
-# Package production .aab
+# Package .aab's
 ./gradlew bundleRelease
 
 # List all available tasks

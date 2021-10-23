@@ -18,15 +18,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome to Fixate!"
-        android:textSize="18sp"
-        android:layout_marginBottom="16dp"
+        android:textColor="?colorOnPrimarySurface"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
         app:font_weight="medium" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
-        android:layout_marginBottom="24dp" />
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@mipmap/ic_foreground"
+        android:layout_marginBottom="8dp" />
 
     <io.aklinker1.files.ui.WeightedTextView
         android:layout_width="wrap_content"

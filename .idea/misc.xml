@@ -40,6 +40,9 @@
         <entry key="app/src/main/res/layout/navigation_path.xml" value="0.14311043566362716" />
         <entry key="app/src/main/res/layout/path_list_fragment.xml" value="0.14311043566362716" />
         <entry key="app/src/main/res/layout/welcome_activity.xml" value="0.21" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3104166666666667" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_beta.xml" value="0.3104166666666667" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3104166666666667" />
         <entry key="livefs/src/main/res/drawable/file_anim.xml" value="0.4" />
         <entry key="livefs/src/main/res/drawable/file_app.xml" value="0.4" />
         <entry key="livefs/src/main/res/drawable/file_audio.xml" value="0.4" />
