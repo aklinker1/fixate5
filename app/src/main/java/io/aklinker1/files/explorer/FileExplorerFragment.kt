@@ -54,7 +54,6 @@ class FileExplorerFragment : BaseFragment() {
     val activeIndex = navigationViewModel.getActivePathIndex()
 
     items.observe(viewLifecycleOwner) {
-      Log.d("fixate", "items changed: $it")
       adapter.items = it
       adapter.notifyDataSetChanged()
     }

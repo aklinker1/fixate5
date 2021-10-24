@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="status_bar">#DAe8e8e8</color>
+    <color name="background_variant">@color/grey_200</color>
     <color name="status_bar_dark">#DA242424</color>
     <color name="extension_icon_background">#ffffff</color>
     <color name="background">#f8f8f8</color>
     <color name="navigation_active">#ffffff</color>
     <color name="navigation_inactive">#000000</color>
+    <color name="primary_highlight">#482196F3</color>
 </resources>

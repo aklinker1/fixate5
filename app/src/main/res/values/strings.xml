@@ -1,13 +1,22 @@
 <resources>
-    <!-- General -->
+    <!-- App -->
     <string name="app_name">Fixate</string>
     <string name="app_name_beta">Fixate Beta</string>
+    <string name="app_name_full">Fixate File Manager</string>
 
     <!-- Folder Aliases -->
     <string name="folder_alias_home">Home</string>
     <string name="folder_alias_trash">Trash</string>
+
+    <!-- General -->
     <string name="files_section">Files</string>
     <string name="folders_section">Folders</string>
     <string name="file_options">More options</string>
     <string name="main_menu">Main menu</string>
+    <string name="navigation_home">File Explorer</string>
+    <string name="navigation_trash">Trash</string>
+    <string name="navigation_settings">Settings</string>
+    <string name="quick_settings">Quick Settings</string>
+    <string name="quick_setting_hidden_files">Show hidden files</string>
+    <string name="settings_title">Fixate Settings</string>
 </resources>

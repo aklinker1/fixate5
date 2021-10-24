@@ -7,31 +7,31 @@ import io.aklinker1.files.R
 import io.aklinker1.livefs.LiveFile
 
 object KnownFilePaths {
-  val HOME = Environment.getExternalStorageDirectory()?.absolutePath
+  val HOME = Environment.getExternalStorageDirectory()?.absolutePath ?: ""
   val TRASH = "${Environment.getDataDirectory()}/.trash"
 
   val ALARMS =
-    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_ALARMS)?.absolutePath
-  val DCIM = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)?.absolutePath
+    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_ALARMS)?.absolutePath ?: ""
+  val DCIM = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)?.absolutePath ?: ""
   val DOCUMENTS =
-    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS)?.absolutePath
+    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS)?.absolutePath ?: ""
   val DOWNLOADS =
-    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)?.absolutePath
+    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)?.absolutePath ?: ""
   val MOVIES =
-    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES)?.absolutePath
+    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES)?.absolutePath ?: ""
   val MUSIC =
-    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC)?.absolutePath
+    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC)?.absolutePath ?: ""
   val NOTIFICATIONS =
-    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_NOTIFICATIONS)?.absolutePath
+    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_NOTIFICATIONS)?.absolutePath ?: ""
   val PICTURES =
-    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)?.absolutePath
+    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)?.absolutePath ?: ""
   val PODCASTS =
-    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PODCASTS)?.absolutePath
+    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PODCASTS)?.absolutePath ?: ""
   val RINGTONES =
-    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_RINGTONES)?.absolutePath
+    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_RINGTONES)?.absolutePath ?: ""
 
-  val ARCHIVE = if (HOME != null) "$HOME/Archive" else null
-  val CARDBOARD = if (HOME != null) "$HOME/Cardboard" else null
+  val ARCHIVE = if (HOME != "") "$HOME/Archive" else ""
+  val CARDBOARD = if (HOME != "") "$HOME/Cardboard" else ""
 
 }
 

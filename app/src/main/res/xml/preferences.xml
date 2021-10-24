@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".preferences.SettingsActivity">
+
+    <Preference
+        app:title="Oh no!"
+        app:summary="Preferences haven't been added yet, come back soon!" />
+
+</PreferenceScreen>

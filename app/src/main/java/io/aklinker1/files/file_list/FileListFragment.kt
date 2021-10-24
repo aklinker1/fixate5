@@ -28,7 +28,7 @@ class FileListFragment(private var parent: LiveFile) : BaseFragment() {
   ): View {
     binding = FileListFragmentBinding.inflate(inflater)
     fileListViewModel = FileListViewModel.from(this)
-    navigationViewModel = NavigationViewModel.from(requireActivity() as BaseActivity)
+    navigationViewModel = NavigationViewModel.from(baseActivity)
     initLayout()
     return binding.root
   }
