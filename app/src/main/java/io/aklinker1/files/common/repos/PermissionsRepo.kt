@@ -11,7 +11,7 @@ import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
-import io.aklinker1.files.BaseActivity
+import io.aklinker1.files.common.base.BaseActivity
 
 typealias PermissionGrantedCallback = (isGranted: Boolean) -> Unit
 

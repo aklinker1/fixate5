@@ -1,4 +1,4 @@
-package io.aklinker1.files
+package io.aklinker1.files.common.base
 
 import android.os.Bundle
 import android.view.View

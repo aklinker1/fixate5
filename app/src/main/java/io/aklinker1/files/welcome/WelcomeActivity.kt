@@ -3,7 +3,7 @@ package io.aklinker1.files.welcome
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import io.aklinker1.files.BaseActivity
+import io.aklinker1.files.common.base.BaseActivity
 import io.aklinker1.files.databinding.WelcomeActivityBinding
 import io.aklinker1.files.main.MainActivity
 

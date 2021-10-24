@@ -1,7 +1,7 @@
 package io.aklinker1.files.common.adapters.view_holders
 
 import android.view.ViewGroup
-import io.aklinker1.files.BaseViewHolder
+import io.aklinker1.files.common.base.BaseViewHolder
 import io.aklinker1.files.R
 import io.aklinker1.files.common.models.FileListSection
 import io.aklinker1.files.common.utils.makeFullWidth
