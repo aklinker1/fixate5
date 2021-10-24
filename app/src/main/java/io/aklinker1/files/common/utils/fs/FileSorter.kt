@@ -29,16 +29,41 @@ object FileSorter {
       GroupBy.NONE -> {
         val sorted = sort(files, options)
         val list = arrayListOf<Any>(FileListHeader(parent.path, parent.nameOrAlias(resources)))
-        list.addAll(sorted.map {
-          FolderListItem(
-            displayName = it.nameOrAlias(resources),
-            folder = it,
-            multiselectMode = false,
-            isSelected = false,
-            onClick = listeners?.onFolderListItemClick
-              ?: TODO("You must pass a click listener for FolderListItems"),
-          )
-        })
+        if (options.foldersFirst) {
+          val filteredFolders = sorted.filter { it.file.isDirectory }
+          val filteredFiles = sorted.filter { it.file.isFile }
+          list.addAll(filteredFolders.map {
+            FolderListItem(
+              displayName = it.nameOrAlias(resources),
+              folder = it,
+              multiselectMode = false,
+              isSelected = false,
+              onClick = listeners?.onFolderListItemClick
+                ?: TODO("You must pass a click listener for FolderListItems"),
+            )
+          })
+          list.addAll(filteredFiles.map {
+            FolderListItem(
+              displayName = it.nameOrAlias(resources),
+              folder = it,
+              multiselectMode = false,
+              isSelected = false,
+              onClick = listeners?.onFolderListItemClick
+                ?: TODO("You must pass a click listener for FolderListItems"),
+            )
+          })
+        } else {
+          list.addAll(sorted.map {
+            FolderListItem(
+              displayName = it.nameOrAlias(resources),
+              folder = it,
+              multiselectMode = false,
+              isSelected = false,
+              onClick = listeners?.onFolderListItemClick
+                ?: TODO("You must pass a click listener for FolderListItems"),
+            )
+          })
+        }
         list
       }
       GroupBy.TYPE -> {

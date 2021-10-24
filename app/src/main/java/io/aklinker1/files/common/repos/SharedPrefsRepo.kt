@@ -25,6 +25,10 @@ abstract class SharedPrefsRepo(activity: Activity, sharedPreferencesName: String
 
   // Put Utils
 
+  protected fun putBoolean(key: String, value: Boolean) {
+    prefs.edit().putBoolean(key, value).apply()
+  }
+
   protected fun putString(key: String, value: String) {
     prefs.edit().putString(key, value).apply()
   }

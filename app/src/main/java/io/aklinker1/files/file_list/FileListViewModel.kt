@@ -1,13 +1,10 @@
 package io.aklinker1.files.file_list
 
 import android.app.Activity
-import android.content.Context
 import android.content.res.Resources
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import io.aklinker1.files.common.base.BaseActivity
 import io.aklinker1.files.common.base.BaseViewModel
-import io.aklinker1.files.common.enums.GroupBy
 import io.aklinker1.files.common.models.FileListItemClickListeners
 import io.aklinker1.files.common.models.FileListOptions
 import io.aklinker1.files.common.repos.SettingsRepo
@@ -42,7 +39,8 @@ class FileListViewModel(activity: Activity) : BaseViewModel() {
       newChildren,
       FileListOptions(
         sortBy = settingsRepo.fileSort,
-        groupBy = GroupBy.TYPE,
+        groupBy = settingsRepo.groupBy,
+        foldersFirst = settingsRepo.foldersFirst,
       ),
       listeners,
     ))
