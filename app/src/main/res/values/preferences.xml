@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="preference_file_sort_key">FILE_SORT</string>
+    <string name="preference_file_sort_title">Sort Order</string>
+    <string-array name="preference_file_sort_entries">
+        <item>Filename Ascending (A to Z)</item>
+        <item>Filename Descending (Z to A)</item>
+        <item>Modified Date (Older First)</item>
+        <item>Modified Date (Newer First)</item>
+    </string-array>
+    <string-array name="preference_file_sort_entry_values">
+        <!-- Need to match SortBy enum names -->
+        <item>FILENAME_ASC</item>
+        <item>FILENAME_DESC</item>
+        <item>LAST_MODIFIED_ASC</item>
+        <item>LAST_MODIFIED_DESC</item>
+    </string-array>
+</resources>

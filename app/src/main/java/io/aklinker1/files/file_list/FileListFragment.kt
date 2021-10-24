@@ -26,7 +26,7 @@ class FileListFragment(private var parent: LiveFile) : BaseFragment() {
     savedInstanceState: Bundle?,
   ): View {
     binding = FileListFragmentBinding.inflate(inflater)
-    fileListViewModel = FileListViewModel.from(this)
+    fileListViewModel = FileListViewModel(baseActivity)
     navigationViewModel = NavigationViewModel.from(baseActivity)
     initLayout()
     return binding.root
@@ -67,4 +67,9 @@ class FileListFragment(private var parent: LiveFile) : BaseFragment() {
 
   val id: Long
     get() = parent.path.hashCode().toLong()
+
+  override fun onResume() {
+    super.onResume()
+    fileListViewModel.reloadItems()
+  }
 }
