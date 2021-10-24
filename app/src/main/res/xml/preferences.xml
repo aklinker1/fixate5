@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     tools:context=".preferences.SettingsActivity">
+
+    <PreferenceCategory
+        android:title="@string/preference_sort_and_filter_category"/>
 
     <DropDownPreference
         app:key="@string/preference_file_sort_key"
         app:title="@string/preference_file_sort_title"
+        app:icon="@drawable/ic_sort"
         app:entries="@array/preference_file_sort_entries"
         app:entryValues="@array/preference_file_sort_entry_values"
         tools:summary="Filename Ascending" />
+
+    <SwitchPreferenceCompat
+        app:key="@string/preference_group_by_key"
+        app:title="@string/preference_group_by_title"
+        tools:defaultValue="true" />
+
+    <SwitchPreferenceCompat
+        app:key="@string/preference_folders_first_key"
+        app:title="@string/preference_folders_first_title"
+        tools:defaultValue="true" />
 
 </PreferenceScreen>
