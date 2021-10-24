@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <io.aklinker1.files.ui.WeightedTextView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/section_title"
     android:layout_width="match_parent"
@@ -9,8 +8,6 @@
     android:paddingTop="16dp"
     android:paddingBottom="8dp"
     android:paddingHorizontal="8dp"
-    android:textAllCaps="true"
-    android:textColor="?colorControlNormal"
-    style="@style/TextAppearance.MaterialComponents.Subtitle2"
+    style="@style/Theme.Fixate.SectionHeader"
     tools:text="Folders"
     tools:background="@color/blue_50"/>

@@ -61,7 +61,6 @@ class MainActivity : BaseActivity() {
     supportFragmentManager.beginTransaction()
       .replace(binding.contentContainer.id, FileExplorerFragment())
       .replace(binding.pathListContainer.id, PathListFragment(initialParent)).commit()
-
   }
 
   override fun onBackPressed() {

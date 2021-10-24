@@ -20,7 +20,8 @@ object FileSorter {
     listeners: FileListItemClickListeners?,
   ): List<Any> {
     if (!parent.file.exists()) {
-      TODO("Parent does not exist, show empty view")
+      // TODO
+      return listOf()
     }
     return when (options.groupBy) {
       GroupBy.NONE -> {

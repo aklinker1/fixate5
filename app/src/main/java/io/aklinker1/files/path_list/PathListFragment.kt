@@ -11,12 +11,13 @@ import io.aklinker1.files.common.adapters.list.FixateAdapter
 import io.aklinker1.files.common.models.FileListItemClickListeners
 import io.aklinker1.files.common.view_models.NavigationViewModel
 import io.aklinker1.files.databinding.PathListFragmentBinding
+import io.aklinker1.files.main_menu.MainMenuFragment
 import io.aklinker1.livefs.LiveFile
 
-class PathListFragment(val initialRoot: LiveFile) : BaseFragment() {
+class PathListFragment(private val initialRoot: LiveFile) : BaseFragment() {
 
   lateinit var binding: PathListFragmentBinding
-  lateinit var navigationViewModel: NavigationViewModel
+  private lateinit var navigationViewModel: NavigationViewModel
 
   override fun onCreateView(
     inflater: LayoutInflater,
@@ -47,6 +48,12 @@ class PathListFragment(val initialRoot: LiveFile) : BaseFragment() {
       pathAdapter.notifyDataSetChanged()
     }
     activePathIndex.observe(viewLifecycleOwner) { binding.pathList.smoothScrollToPosition(it) }
+
+    // Event listeners
+    val mainMenu = MainMenuFragment()
+    binding.toolbar.setNavigationOnClickListener {
+      if (!mainMenu.isAdded) mainMenu.show(parentFragmentManager, null)
+    }
   }
 
 }

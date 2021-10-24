@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingVertical="16dp"
+    tools:context=".main.MainActivity">
+
+    <io.aklinker1.files.ui.WeightedTextView
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:text="@string/app_name_full" />
+
+    <io.aklinker1.files.ui.WeightedTextView
+        android:id="@+id/subtitle"
+        style="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.38"
+        android:paddingHorizontal="16dp"
+        android:textAllCaps="true"
+        tools:text="Beta, v1.0.0-alpha" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <io.aklinker1.files.main_menu.MainMenuItem
+        android:id="@+id/nav_home"
+        style="@style/Theme.Fixate.MainMenuItem"
+        app:title="@string/navigation_home"
+        app:icon="@drawable/nav_home"
+        app:selected="true" />
+
+    <io.aklinker1.files.main_menu.MainMenuItem
+        android:id="@+id/nav_trash"
+        style="@style/Theme.Fixate.MainMenuItem"
+        app:title="@string/navigation_trash"
+        app:icon="@drawable/nav_trash" />
+
+    <io.aklinker1.files.main_menu.MainMenuItem
+        android:id="@+id/nav_settings"
+        style="@style/Theme.Fixate.MainMenuItem"
+        app:title="@string/navigation_settings"
+        app:icon="@drawable/nav_settings" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp" />
+
+    <io.aklinker1.files.ui.WeightedTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/quick_settings"
+        style="@style/Theme.Fixate.SectionHeader"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_menu_item_height"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:fitsSystemWindows="true">
+
+        <io.aklinker1.files.ui.WeightedTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/main_menu_item_text_size"
+            android:text="@string/quick_setting_hidden_files"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/show_hidden_files_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
