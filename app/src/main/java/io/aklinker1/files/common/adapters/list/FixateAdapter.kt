@@ -17,6 +17,7 @@ class FixateAdapter(var items: List<Any> = listOf()) :
     const val FOLDER_LIST_ITEM_VIEW_TYPE = 4
 
     const val NO_FILES_VIEW_TYPE = 5
+    const val DELETED_FOLDER_VIEW_TYPE = 6
   }
 
   override fun getItemViewType(position: Int): Int {
@@ -27,6 +28,7 @@ class FixateAdapter(var items: List<Any> = listOf()) :
       // is FileListItem -> FILE_LIST_ITEM_VIEW_TYPE
       is FolderListItem -> FOLDER_LIST_ITEM_VIEW_TYPE
       is NoFiles -> NO_FILES_VIEW_TYPE
+      is DeletedFolder -> DELETED_FOLDER_VIEW_TYPE
       else -> TODO("Unsupported item type: ${items[position]}")
     }
   }
@@ -43,6 +45,7 @@ class FixateAdapter(var items: List<Any> = listOf()) :
       // FILE_LIST_ITEM_VIEW_TYPE -> FileListItemViewHolder(parent)
       FOLDER_LIST_ITEM_VIEW_TYPE -> FolderListItemViewHolder(parent)
       NO_FILES_VIEW_TYPE -> NoFilesViewHolder(parent)
+      DELETED_FOLDER_VIEW_TYPE -> DeletedFolderViewHolder(parent)
       else -> TODO("Unknown viewType: $viewType")
     }
   }
@@ -55,6 +58,7 @@ class FixateAdapter(var items: List<Any> = listOf()) :
       // is FileListItemViewHolder -> holder.onBind(items[position] as FileListItem)
       is FolderListItemViewHolder -> holder.onBind(items[position] as FolderListItem)
       is NoFilesViewHolder -> holder.onBind(items[position] as NoFiles)
+      is DeletedFolderViewHolder -> holder.onBind(items[position] as DeletedFolder)
       else -> TODO("Unknown view holder: ${holder::class.simpleName}")
     }
   }

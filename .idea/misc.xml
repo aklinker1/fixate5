@@ -37,6 +37,7 @@
         <entry key="app/src/main/res/layout-v23/welcome_activity.xml" value="0.17889492753623187" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.556997219647822" />
         <entry key="app/src/main/res/layout/bg_bottom_sheet_dialog.xml" value="0.32395833333333335" />
+        <entry key="app/src/main/res/layout/deleted_folder.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/file_explorer_fragment.xml" value="0.26443768996960487" />
         <entry key="app/src/main/res/layout/file_list_fragment.xml" value="0.26443768996960487" />
         <entry key="app/src/main/res/layout/file_list_header.xml" value="0.26443768996960487" />

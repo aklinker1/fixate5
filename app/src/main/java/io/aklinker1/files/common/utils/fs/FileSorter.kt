@@ -20,8 +20,7 @@ object FileSorter {
     listeners: FileListItemClickListeners?,
   ): List<Any> {
     if (!parent.file.exists()) {
-      // TODO
-      return listOf()
+      return listOf(DeletedFolder(parent.path, parent.nameOrAlias(resources)))
     }
     if (files.isEmpty()) {
       return listOf(NoFiles(parent.path, parent.nameOrAlias(resources)))
