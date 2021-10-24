@@ -86,5 +86,7 @@ object FileSorter {
     when (options.sortBy) {
       SortBy.FILENAME_ASC -> files.sortedBy { it.name() }
       SortBy.FILENAME_DESC -> files.sortedByDescending { it.name() }
+      SortBy.LAST_MODIFIED_ASC -> files.sortedBy { it.file.lastModified() }
+      SortBy.LAST_MODIFIED_DESC -> files.sortedByDescending { it.file.lastModified() }
     }
 }
