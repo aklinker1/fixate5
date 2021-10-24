@@ -2,7 +2,6 @@ package io.aklinker1.files.explorer
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import io.aklinker1.files.BaseFragment
+import io.aklinker1.files.common.base.BaseFragment
 import io.aklinker1.files.common.models.NavigationPath
 import io.aklinker1.files.common.view_models.NavigationViewModel
 import io.aklinker1.files.databinding.FileExplorerFragmentBinding

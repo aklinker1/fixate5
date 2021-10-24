@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.os.Environment
 import android.view.View
 import android.view.WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
-import io.aklinker1.files.BaseActivity
+import io.aklinker1.files.common.base.BaseActivity
 import io.aklinker1.files.common.view_models.NavigationViewModel
 import io.aklinker1.files.databinding.MainActivityBinding
 import io.aklinker1.files.explorer.FileExplorerFragment

@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import io.aklinker1.files.BaseFragment
+import io.aklinker1.files.common.base.BaseFragment
 import io.aklinker1.files.common.adapters.list.FixateAdapter
 import io.aklinker1.files.common.models.FileListItemClickListeners
 import io.aklinker1.files.common.view_models.NavigationViewModel

@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelStoreOwner
-import io.aklinker1.files.BaseViewModel
+import io.aklinker1.files.common.base.BaseViewModel
 import io.aklinker1.files.R
 
 class MainMenuViewModel @Deprecated("Use MainMenuViewModel.from() instead") constructor() : BaseViewModel() {

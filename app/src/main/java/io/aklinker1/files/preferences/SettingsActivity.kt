@@ -2,11 +2,8 @@ package io.aklinker1.files.preferences
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.util.Log
 import android.view.View
-import androidx.fragment.app.FragmentActivity
-import io.aklinker1.files.BaseActivity
+import io.aklinker1.files.common.base.BaseActivity
 import io.aklinker1.files.R
 import io.aklinker1.files.databinding.SettingsActivityBinding
 
