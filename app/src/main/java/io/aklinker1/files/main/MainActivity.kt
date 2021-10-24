@@ -60,7 +60,7 @@ class MainActivity : BaseActivity() {
     val initialParent = LiveFile(Environment.getExternalStorageDirectory())
     supportFragmentManager.beginTransaction()
       .replace(binding.contentContainer.id, FileExplorerFragment())
-      .replace(binding.pathListContainer.id, PathListFragment(initialParent)).commit()
+      .replace(binding.pathListContainer.id, PathListFragment(initialParent)).commitNow()
   }
 
   override fun onBackPressed() {
