@@ -2,14 +2,8 @@ package io.aklinker1.files.common.adapters.list
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import io.aklinker1.files.common.adapters.view_holders.FileListHeaderViewHolder
-import io.aklinker1.files.common.adapters.view_holders.FileListSectionViewHolder
-import io.aklinker1.files.common.adapters.view_holders.FolderListItemViewHolder
-import io.aklinker1.files.common.adapters.view_holders.NavigationPathViewHolder
-import io.aklinker1.files.common.models.FileListHeader
-import io.aklinker1.files.common.models.FileListSection
-import io.aklinker1.files.common.models.FolderListItem
-import io.aklinker1.files.common.models.NavigationPath
+import io.aklinker1.files.common.adapters.view_holders.*
+import io.aklinker1.files.common.models.*
 
 class FixateAdapter(var items: List<Any> = listOf()) :
   RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -21,6 +15,8 @@ class FixateAdapter(var items: List<Any> = listOf()) :
 
     // const val FILE_LIST_ITEM_VIEW_TYPE = 3
     const val FOLDER_LIST_ITEM_VIEW_TYPE = 4
+
+    const val NO_FILES_VIEW_TYPE = 5
   }
 
   override fun getItemViewType(position: Int): Int {
@@ -30,6 +26,7 @@ class FixateAdapter(var items: List<Any> = listOf()) :
       is FileListSection -> FILE_LIST_SECTION_VIEW_TYPE
       // is FileListItem -> FILE_LIST_ITEM_VIEW_TYPE
       is FolderListItem -> FOLDER_LIST_ITEM_VIEW_TYPE
+      is NoFiles -> NO_FILES_VIEW_TYPE
       else -> TODO("Unsupported item type: ${items[position]}")
     }
   }
@@ -45,6 +42,7 @@ class FixateAdapter(var items: List<Any> = listOf()) :
       FILE_LIST_SECTION_VIEW_TYPE -> FileListSectionViewHolder(parent)
       // FILE_LIST_ITEM_VIEW_TYPE -> FileListItemViewHolder(parent)
       FOLDER_LIST_ITEM_VIEW_TYPE -> FolderListItemViewHolder(parent)
+      NO_FILES_VIEW_TYPE -> NoFilesViewHolder(parent)
       else -> TODO("Unknown viewType: $viewType")
     }
   }
@@ -56,6 +54,7 @@ class FixateAdapter(var items: List<Any> = listOf()) :
       is FileListSectionViewHolder -> holder.onBind(items[position] as FileListSection)
       // is FileListItemViewHolder -> holder.onBind(items[position] as FileListItem)
       is FolderListItemViewHolder -> holder.onBind(items[position] as FolderListItem)
+      is NoFilesViewHolder -> holder.onBind(items[position] as NoFiles)
       else -> TODO("Unknown view holder: ${holder::class.simpleName}")
     }
   }

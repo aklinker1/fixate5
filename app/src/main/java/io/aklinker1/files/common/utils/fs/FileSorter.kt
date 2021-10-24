@@ -23,6 +23,9 @@ object FileSorter {
       // TODO
       return listOf()
     }
+    if (files.isEmpty()) {
+      return listOf(NoFiles(parent.path, parent.nameOrAlias(resources)))
+    }
     return when (options.groupBy) {
       GroupBy.NONE -> {
         val sorted = sort(files, options)

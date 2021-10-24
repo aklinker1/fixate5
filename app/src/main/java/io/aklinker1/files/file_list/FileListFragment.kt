@@ -17,8 +17,8 @@ import io.aklinker1.livefs.LiveFile
 class FileListFragment(private var parent: LiveFile) : BaseFragment() {
 
   lateinit var binding: FileListFragmentBinding
-  lateinit var fileListViewModel: FileListViewModel
-  lateinit var navigationViewModel: NavigationViewModel
+  private lateinit var fileListViewModel: FileListViewModel
+  private lateinit var navigationViewModel: NavigationViewModel
 
   override fun onCreateView(
     inflater: LayoutInflater,

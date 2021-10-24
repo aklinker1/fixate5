@@ -47,6 +47,7 @@
         <entry key="app/src/main/res/layout/main_menu_fragment.xml" value="0.360054347826087" />
         <entry key="app/src/main/res/layout/main_menu_item.xml" value="0.360054347826087" />
         <entry key="app/src/main/res/layout/navigation_path.xml" value="0.14311043566362716" />
+        <entry key="app/src/main/res/layout/no_files.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/path_list_fragment.xml" value="0.14311043566362716" />
         <entry key="app/src/main/res/layout/settings_activity.xml" value="0.360054347826087" />
         <entry key="app/src/main/res/layout/welcome_activity.xml" value="0.21" />
