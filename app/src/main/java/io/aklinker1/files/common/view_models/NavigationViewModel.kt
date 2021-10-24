@@ -87,12 +87,13 @@ class NavigationViewModel @Deprecated("Use NavigationViewModel.from() instead") 
   fun pop() {
     val i = activePathIndex.value ?: 0
     if (i != 0) {
-      val newIndex = i - 1
+      var newIndex = i - 1
       val currentItems = pathItems.value?.clone() as ArrayList<NavigationPath>? ?: arrayListOf()
       val newItems = ArrayList<NavigationPath>(currentItems.size)
       currentItems.forEachIndexed { j, item ->
-        newItems.add(item.copy(isActive = j <= newIndex))
+        if (item.folder.file.exists()) newItems.add(item.copy(isActive = j <= newIndex))
       }
+      if (newIndex >= newItems.size) newIndex = newItems.size - 1
       activePathIndex.postValue(newIndex)
       pathItems.postValue(newItems)
     }
@@ -101,12 +102,14 @@ class NavigationViewModel @Deprecated("Use NavigationViewModel.from() instead") 
   fun jump(newActiveIndex: Int) {
     if (newActiveIndex == activePathIndex.value) return
 
+    var newIndex = newActiveIndex
     val currentItems = pathItems.value?.clone() as ArrayList<NavigationPath>? ?: arrayListOf()
     val newItems = ArrayList<NavigationPath>(currentItems.size)
     currentItems.forEachIndexed { j, item ->
-      newItems.add(item.copy(isActive = j <= newActiveIndex))
+      if (item.folder.file.exists()) newItems.add(item.copy(isActive = j <= newIndex))
     }
-    activePathIndex.postValue(newActiveIndex)
+    if (newIndex >= newItems.size) newIndex = newItems.size - 1
+    activePathIndex.postValue(newIndex)
     pathItems.postValue(newItems)
   }
 
