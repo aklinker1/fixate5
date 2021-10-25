@@ -11,6 +11,15 @@ import io.aklinker1.files.common.repos.SettingsRepo
 class SettingsFragmentViewModel(activity: Activity) : BaseViewModel() {
   private val settingsRepo = SettingsRepo(activity)
 
+  private val dayNightMode: MutableLiveData<Int> by lazy {
+    MutableLiveData(settingsRepo.dayNightMode)
+  }
+  fun getDayNightMode(): LiveData<Int> = dayNightMode
+  fun setDayNightMode(value: Int) {
+    settingsRepo.dayNightMode = value
+    dayNightMode.postValue(value)
+  }
+
   private val fileSort: MutableLiveData<SortBy> by lazy {
     MutableLiveData(settingsRepo.fileSort)
   }

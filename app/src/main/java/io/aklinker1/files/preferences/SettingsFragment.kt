@@ -20,6 +20,23 @@ class SettingsFragment : PreferenceFragmentCompat() {
   }
 
   private fun initLayout() {
+    // Appearance
+
+    val dayNightMode = viewModel.getDayNightMode()
+    val dayNightModePref =
+      findPreference<DropDownPreference>(getString(R.string.preference_day_night_mode_key))
+        ?: throw RuntimeException("Day night mode pref was not found")
+    dayNightMode.observe(this) {
+      Log.d("fixate", "day night mode: $it")
+      dayNightModePref.summary = dayNightModePref.entries[dayNightModePref.findIndexOfValue("$it")]
+    }
+    dayNightModePref.setOnPreferenceChangeListener { _, newValue ->
+      viewModel.setDayNightMode((newValue as String).toInt())
+      true
+    }
+
+    // Sort & Filter
+
     val foldersFirst = viewModel.getFoldersFirst()
     val foldersFirstPref =
       findPreference<SwitchPreferenceCompat>(getString(R.string.preference_folders_first_key))

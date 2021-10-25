@@ -1,6 +1,7 @@
 package io.aklinker1.files.common.repos
 
 import android.app.Activity
+import androidx.appcompat.app.AppCompatDelegate
 import io.aklinker1.files.R
 import io.aklinker1.files.common.enums.GroupBy
 import io.aklinker1.files.common.enums.SortBy
@@ -9,6 +10,11 @@ class SettingsRepo(activity: Activity): SharedPrefsRepo(activity, SHARED_PREFERE
   companion object {
     const val SHARED_PREFERENCES_NAME = "user-settings"
   }
+
+  private val dayNightModeKey = activity.resources.getString(R.string.preference_day_night_mode_key)
+  var dayNightMode: Int
+    get() = getInt(dayNightModeKey, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+    set(value) = putInt(dayNightModeKey, value)
 
   private val fileSortKey = activity.resources.getString(R.string.preference_file_sort_key)
   var fileSort: SortBy

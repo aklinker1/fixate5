@@ -30,16 +30,6 @@ class MainActivity : BaseActivity() {
   private lateinit var mainViewModel: MainViewModel
   private lateinit var navigationViewModel: NavigationViewModel
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-      window.decorView.windowInsetsController?.setSystemBarsAppearance(
-        APPEARANCE_LIGHT_STATUS_BARS,
-        APPEARANCE_LIGHT_STATUS_BARS,
-      )
-    }
-    super.onCreate(savedInstanceState)
-  }
-
   override fun onInflateView(): View {
     binding = MainActivityBinding.inflate(layoutInflater)
     return binding.root

@@ -9,8 +9,40 @@
         <item name="colorSecondary">@color/green_200</item>
         <item name="colorSecondaryVariant">@color/green_200</item>
         <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="backgroundColor">@color/background_dark</item>
     </style>
+
+    <style name="Theme.FixateBottomNavigation">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="colorPrimaryVariant">@color/blue_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/green_300</item>
+        <item name="colorSecondaryVariant">@color/green_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Customize your theme here. -->
+        <item name="android:statusBarColor">?colorPrimaryVariant</item>
+        <item name="backgroundColor">@color/background</item>
+        <item name="bottomSheetDialogTheme">@style/Theme.Fixate.BottomSheetDialog</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/background_variant</item>
+        <item name="statusBarForeground">@color/black</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:navigationBarColor">?colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.Fixate.PrimaryBackground">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">?colorPrimarySurface</item>
+        <item name="android:textColor">?colorOnPrimarySurface</item>
+        <item name="drawableTint">?colorOnPrimarySurface</item>
+        <item name="android:statusBarColor">?colorPrimaryVariant</item>
+        <item name="android:navigationBarColor">?colorPrimaryVariant</item>
+    </style>
+
 </resources>

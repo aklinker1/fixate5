@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="bottom"
-    android:background="?backgroundColor"
     android:fitsSystemWindows="true"
     tools:context=".main.MainActivity">
 
@@ -43,7 +42,7 @@
         app:fabSize="normal"
         app:layout_anchor="@+id/bottom_app_bar"
         app:layout_anchorGravity="end"
-        app:rippleColor="?colorSurface"
+        app:rippleColor="?attr/colorSurface"
         app:tint="@color/white"
         android:contentDescription="@string/main_menu" />
 

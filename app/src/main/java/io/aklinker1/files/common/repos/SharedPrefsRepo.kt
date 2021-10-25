@@ -15,6 +15,10 @@ abstract class SharedPrefsRepo(activity: Activity, sharedPreferencesName: String
     return prefs.getBoolean(key, default)
   }
 
+  protected fun getInt(key: String, default: Int): Int {
+    return prefs.getInt(key, default)
+  }
+
   protected fun getString(key: String, default: String): String {
     return prefs.getString(key, default) ?: default
   }
@@ -27,6 +31,10 @@ abstract class SharedPrefsRepo(activity: Activity, sharedPreferencesName: String
 
   protected fun putBoolean(key: String, value: Boolean) {
     prefs.edit().putBoolean(key, value).apply()
+  }
+
+  protected fun putInt(key: String, value: Int) {
+    prefs.edit().putInt(key, value).apply()
   }
 
   protected fun putString(key: String, value: String) {
