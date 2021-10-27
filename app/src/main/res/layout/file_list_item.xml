@@ -12,13 +12,27 @@
     app:cardElevation="2dp"
     app:cardMaxElevation="6dp">
 
-    <FrameLayout
+    <io.aklinker1.files.ui.SquareFrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <include
-            android:id="@+id/details"
-            layout="@layout/file_details" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:background="@color/purple_500" />
+
+            <include
+                android:id="@+id/details"
+                layout="@layout/file_details" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <View
             android:id="@+id/click"
@@ -29,6 +43,6 @@
             android:focusable="true"
             tools:visibility="gone" />
 
-    </FrameLayout>
+    </io.aklinker1.files.ui.SquareFrameLayout>
 
 </androidx.cardview.widget.CardView>

@@ -5,10 +5,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import io.aklinker1.files.common.base.BaseFragment
 import io.aklinker1.files.R
 import io.aklinker1.files.common.adapters.list.FixateAdapter
+import io.aklinker1.files.common.base.BaseFragment
 import io.aklinker1.files.common.models.FileListItemClickListeners
 import io.aklinker1.files.common.view_models.NavigationViewModel
 import io.aklinker1.files.databinding.FileListFragmentBinding
@@ -43,6 +44,9 @@ class FileListFragment(private var parent: LiveFile) : BaseFragment() {
       parent,
       FileListItemClickListeners(
         onFolderListItemClick = { navigationViewModel.push(it) },
+        onFileListItemClick = {
+          Toast.makeText(context, "TODO: open files", Toast.LENGTH_SHORT).show()
+        },
       ),
     )
     val adapter = FixateAdapter(items.value ?: listOf())

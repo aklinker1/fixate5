@@ -32,37 +32,10 @@ object FileSorter {
         if (options.foldersFirst) {
           val filteredFolders = sorted.filter { it.file.isDirectory }
           val filteredFiles = sorted.filter { it.file.isFile }
-          list.addAll(filteredFolders.map {
-            FolderListItem(
-              displayName = it.nameOrAlias(resources),
-              folder = it,
-              multiselectMode = false,
-              isSelected = false,
-              onClick = listeners?.onFolderListItemClick
-                ?: TODO("You must pass a click listener for FolderListItems"),
-            )
-          })
-          list.addAll(filteredFiles.map {
-            FolderListItem(
-              displayName = it.nameOrAlias(resources),
-              folder = it,
-              multiselectMode = false,
-              isSelected = false,
-              onClick = listeners?.onFolderListItemClick
-                ?: TODO("You must pass a click listener for FolderListItems"),
-            )
-          })
+          list.addAll(filteredFolders.map { fileListItem(it, resources, listeners) })
+          list.addAll(filteredFiles.map { fileListItem(it, resources, listeners) })
         } else {
-          list.addAll(sorted.map {
-            FolderListItem(
-              displayName = it.nameOrAlias(resources),
-              folder = it,
-              multiselectMode = false,
-              isSelected = false,
-              onClick = listeners?.onFolderListItemClick
-                ?: TODO("You must pass a click listener for FolderListItems"),
-            )
-          })
+          list.addAll(sorted.map { fileListItem(it, resources, listeners) })
         }
         list
       }
@@ -75,31 +48,13 @@ object FileSorter {
         if (filteredFolders.isNotEmpty()) {
           val sortedFolders = sort(filteredFolders.filter { it.file.isDirectory }, options)
           list.add(FileListSection(resources.getString(R.string.folders_section)))
-          list.addAll(sortedFolders.map {
-            FolderListItem(
-              displayName = it.nameOrAlias(resources),
-              folder = it,
-              multiselectMode = false,
-              isSelected = false,
-              onClick = listeners?.onFolderListItemClick
-                ?: TODO("You must pass a click listener for FolderListItems"),
-            )
-          })
+          list.addAll(sortedFolders.map { fileListItem(it, resources, listeners) })
         }
 
         if (filteredFiles.isNotEmpty()) {
           val sortedFiles = sort(filteredFiles.filter { it.file.isFile }, options)
           list.add(FileListSection(resources.getString(R.string.files_section)))
-          list.addAll(sortedFiles.map {
-            FolderListItem(
-              displayName = it.nameOrAlias(resources),
-              folder = it,
-              multiselectMode = false,
-              isSelected = false,
-              onClick = listeners?.onFolderListItemClick
-                ?: TODO("You must pass a click listener for FolderListItems"),
-            )
-          })
+          list.addAll(sortedFiles.map { fileListItem(it, resources, listeners) })
         }
 
         list
@@ -114,4 +69,24 @@ object FileSorter {
       SortBy.LAST_MODIFIED_ASC -> files.sortedBy { it.file.lastModified() }
       SortBy.LAST_MODIFIED_DESC -> files.sortedByDescending { it.file.lastModified() }
     }
+
+  private fun fileListItem(
+    file: LiveFile,
+    resources: Resources,
+    listeners: FileListItemClickListeners?,
+  ): Any = if (file.file.isDirectory) FolderListItem(
+    displayName = file.nameOrAlias(resources),
+    folder = file,
+    multiselectMode = false,
+    isSelected = false,
+    onClick = listeners?.onFolderListItemClick
+      ?: TODO("You must pass a click listener for FolderListItems"),
+  ) else FileListItem(
+    displayName = file.nameOrAlias(resources),
+    file = file,
+    multiselectMode = false,
+    isSelected = false,
+    onClick = listeners?.onFileListItemClick
+      ?: TODO("You must pass a click listener for FileListItems"),
+  )
 }

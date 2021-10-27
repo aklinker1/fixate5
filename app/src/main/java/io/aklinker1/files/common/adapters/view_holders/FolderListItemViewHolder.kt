@@ -14,14 +14,14 @@ class FolderListItemViewHolder(viewGroup: ViewGroup) :
 
   override fun onBind(data: FolderListItem) {
     binding.apply {
-      checkbox.visibility = if (data.multiselectMode) View.VISIBLE else View.GONE
-      checkbox.isChecked = data.multiselectMode && data.isSelected
+      details.checkbox.visibility = if (data.multiselectMode) View.VISIBLE else View.GONE
+      details.checkbox.isChecked = data.multiselectMode && data.isSelected
 
-      menu.visibility = View.GONE // if (folder.multiselectMode) View.GONE else View.VISIBLE
+      details.menu.visibility = View.GONE // if (folder.multiselectMode) View.GONE else View.VISIBLE
 
-      icon.setImageResource(KnownFileIcons[data.folder.path] ?: R.drawable.folder_default)
+      details.icon.setImageResource(KnownFileIcons[data.folder.path] ?: R.drawable.folder_default)
 
-      name.text = data.displayName
+      details.name.text = data.displayName
 
       click.setOnClickListener { data.onClick(data.folder) }
     }
