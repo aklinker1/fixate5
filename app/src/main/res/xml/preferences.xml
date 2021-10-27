@@ -18,11 +18,13 @@
     <SwitchPreferenceCompat
         app:key="@string/preference_group_by_key"
         app:title="@string/preference_group_by_title"
-        tools:defaultValue="true" />
+        app:isPreferenceVisible="false"
+        tools:defaultValue="true"/>
 
     <SwitchPreferenceCompat
         app:key="@string/preference_folders_first_key"
         app:title="@string/preference_folders_first_title"
+        app:isPreferenceVisible="false"
         tools:defaultValue="true" />
 
 </PreferenceScreen>

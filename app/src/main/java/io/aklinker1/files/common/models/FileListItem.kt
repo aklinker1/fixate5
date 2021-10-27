@@ -2,7 +2,12 @@ package io.aklinker1.files.common.models
 
 import io.aklinker1.livefs.LiveFile
 
-data class FileListItem(val displayName: String, val file: LiveFile) {
+data class FileListItem(
+  val displayName: String, val file: LiveFile,
+  val multiselectMode: Boolean,
+  val isSelected: Boolean,
+  val onClick: OnFolderListItemClick,
+) {
   /**
    * For `FixateAdapter.getItemId`
    */
